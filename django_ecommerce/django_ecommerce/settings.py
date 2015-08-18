@@ -78,6 +78,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(SITE_ROOT, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -90,6 +91,9 @@ STATICFILES_FINDERS = (
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^6gj_y5hh%#a@+p4mcbh%&aw=wy717cryx2%^*(8(gt#dn$fws'
+
+STRIPE_SECRET = 'sk_test_jmaoCKVb6BngwUL6m3kyYJM0'
+STRIPE_PUBLISHABLE = 'pk_test_nCprqZ16ljnr2cQjBN3DwaE6'    
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -135,7 +139,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'main',
      'django.contrib.flatpages',
-     'contact'
+     'contact',
+     'payments'
     
 )
 

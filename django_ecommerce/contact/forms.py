@@ -4,6 +4,7 @@ from django import forms
 
 
 class ContactView(ModelForm):
-	message = forms.CharField(widget = forms.Textarea)
-	class Meta:
-		model = ContactForm
+    message = forms.CharField(widget=forms.Textarea)
+
+    class Meta:
+        model = ContactForm
